@@ -40,7 +40,10 @@ public class Main {
         studentGroup2.setStudents(stGroup2);
         studentGroup2.setTeacher(teacher2);
         System.out.println("Список студентов группы 2: " + studentGroup2);
-        System.out.println("_____________________________");
+        System.out.println("+++++++++++++++++++++++++++++");
+/**
+* Создать класс Поток содержащий в себе список УчебныхГрупп и реализующий интерфейс Iterator
+ */
         Stream streamIterator = new Stream();
         streamIterator.addStudentGroup(studentGroup1);
         streamIterator.addStudentGroup(studentGroup2);
@@ -48,14 +51,17 @@ public class Main {
             System.out.println(streamIterator.next());
         }
 
-        System.out.println("+++++++++++++++++++");
+        System.out.println("----------------------------");
+/**
+ * Создать класс ПотокСервис, добавив в него метод сортировки списка потоков, используя созданный StreamComparator
+ */
         Stream stream = new Stream();
         stream.addStudentGroup(studentGroup2);
         stream.addStudentGroup(studentGroup1);
         System.out.println("Все студенческие группы " + stream);
 
-        Collections.sort(stream.getStudentGroups(), new StreamComparator());
-        System.out.println("Все студенческие группы после сортировки " + stream.toString());
+        StreamService streamService = new StreamService();
+        System.out.println("Все студенческие группы после сортировки" + streamService.SortListStream(stream));
 
     }
 }

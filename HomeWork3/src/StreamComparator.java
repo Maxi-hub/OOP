@@ -11,7 +11,6 @@ public class StreamComparator implements Comparator<StudentGroup> {
     }
 
 
-
     @Override
     public String toString() {
         return "StreamComparator{" +
